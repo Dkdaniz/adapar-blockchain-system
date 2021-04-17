@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { promisify } = require('util');
 
-const { users, logs } = require('../models');
+const { users } = require('../models');
 const { crypto } = require('../../config');
 
 async function store(req, res) {
