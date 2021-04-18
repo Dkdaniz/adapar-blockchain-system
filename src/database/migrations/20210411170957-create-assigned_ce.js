@@ -9,8 +9,6 @@ module.exports = {
       },
       user_id: {
         allowNull: false,
-        primarykey: true,
-        autoIncrement: true,
         type: Sequelize.INTEGER,
       },
       ce_id: {

@@ -43,6 +43,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      state_registration: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       address: {
         type: Sequelize.INTEGER,
         allowNull: false,

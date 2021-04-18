@@ -11,20 +11,24 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      type_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      unit_level_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      unit_id: {
+      ce_id: {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      status: {
-        type: Sequelize.BOOLEAN,
+      ulsa_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      urs_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      uc_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      category_id: {
+        type: Sequelize.STRING,
         allowNull: false,
         defaultValue: true,
       },
