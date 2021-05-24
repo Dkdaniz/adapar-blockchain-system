@@ -28,7 +28,7 @@ module.exports = {
         allowNull: false,
       },
       principes_actifs_id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       name: {
@@ -39,25 +39,17 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      apresentation: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      administration: {
+      administration_route: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       license_identifier: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
         allowNull: true,
       },
       license_year: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
         allowNull: true,
-      },
-      route: {
-        type: Sequelize.STRING,
-        allowNull: false,
       },
       createdAt: {
         type: Sequelize.DATE,

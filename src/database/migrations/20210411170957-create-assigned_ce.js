@@ -15,10 +15,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      status: {
+      status_id: {
         allowNull: false,
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         type: Sequelize.DATE,

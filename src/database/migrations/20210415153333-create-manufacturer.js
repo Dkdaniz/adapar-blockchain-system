@@ -20,7 +20,7 @@ module.exports = {
         allowNull: false,
       },
       address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       contact_number: {
@@ -28,7 +28,7 @@ module.exports = {
         allowNull: false,
       },
       email: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {
@@ -44,7 +44,7 @@ module.exports = {
     });
   },
 
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface) => {
     await queryInterface.dropTable('manufacturers');
   },
 };

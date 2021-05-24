@@ -1,6 +1,6 @@
 const config = {
   name: 'Doutorado',
-  port: process.env.PORT | 3333,
+  port: process.env.PORT || 3333,
   postgres: {
     host: process.env.POSTGRES_HOST,
     username: process.env.POSTGRES_USERNAME,

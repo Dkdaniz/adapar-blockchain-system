@@ -2,7 +2,7 @@ const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const { crypto } = require('../../config');
 
-const { logs } = require('../models');
+// const { logs } = require('../models');
 
 module.exports = async (req, res, next) => {
   const { token } = req.headers;
@@ -20,16 +20,16 @@ module.exports = async (req, res, next) => {
       return res.status(401).json({ error: 'token invalid' });
     }
 
-    await logs.create({
-      email,
-      method: req.logs.method,
-      url: req.logs.url,
-      status: req.logs.status,
-      date: req.logs.date,
-      responseTime: req.logs.responseTime,
-      remoteUser: req.logs.remoteUser,
-      agentUser: req.logs.agentUser,
-    });
+    // await logs.create({
+    //   email,
+    //   method: req.logs.method,
+    //   url: req.logs.url,
+    //   status: req.logs.status,
+    //   date: req.logs.date,
+    //   responseTime: req.logs.responseTime,
+    //   remoteUser: req.logs.remoteUser,
+    //   agentUser: req.logs.agentUser,
+    // });
 
     return next();
   } catch (error) {

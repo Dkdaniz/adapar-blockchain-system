@@ -24,10 +24,10 @@ module.exports = {
     'no-case-declarations': 'off',
     'array-callback-return': 'off',
     'new-cap': 'off',
-    'eslint-disable no-return-await': 'off',
-    'eslint-disable no-await-in-loop': 'off',
-    'eslint-disable-next-line no-return-await':'off',
-    'eslint-disable consistent-return': 'off'
+    'no-return-await': 'off',
+    'no-await-in-loop': 'off',
+    'no-return-await':'off',
+    'consistent-return': 'off'
   },
 };
 

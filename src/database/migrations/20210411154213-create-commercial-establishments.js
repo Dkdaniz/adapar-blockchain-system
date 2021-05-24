@@ -15,7 +15,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      type_id: {
+      category_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
@@ -48,7 +48,7 @@ module.exports = {
         allowNull: false,
       },
       address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       contact_number: {
@@ -56,7 +56,7 @@ module.exports = {
         allowNull: false,
       },
       email: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       register_number: {

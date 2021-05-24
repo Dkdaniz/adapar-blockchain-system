@@ -7,10 +7,6 @@ module.exports = {
         autoIncrement: true,
         type: Sequelize.INTEGER,
       },
-      position_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
       ce_id: {
         type: Sequelize.INTEGER,
         allowNull: true,
@@ -19,18 +15,17 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      urs_id: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
       uc_id: {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      category_id: {
-        type: Sequelize.STRING,
+      urs_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      position_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue: true,
       },
       name: {
         type: Sequelize.STRING,
@@ -48,6 +43,10 @@ module.exports = {
       cpf: {
         type: Sequelize.INTEGER,
         allowNull: false,
+      },
+      crmv: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       createdAt: {
         type: Sequelize.DATE,

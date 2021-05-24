@@ -1,0 +1,1414 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Sistema de Controle Antimicrobianos Veterinários",
+    "description": "Arquitetura de um Sistema de Controle de Uso, Vendas e Prescrição de Antimicrobianos Veterinários"
+  },
+  "security": [{"bearer":[]}],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/session": {
+      "post": {
+        "summary": "request new token",
+        "tags": [
+          "Session"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Session"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New token"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "summary": "Show all status",
+        "tags": [
+          "Status"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all status"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new status",
+        "tags": [
+          "Status"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Status/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Status created"
+          },
+          "400": {
+            "description": "Error when creating status"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an status",
+        "tags": [
+          "Status"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Status/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Status Deleted"
+          },
+          "400": {
+            "description": "Error when deleting status"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a status",
+        "tags": [
+          "Status"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Status/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Status Updated"
+          },
+          "400": {
+            "description": "Error when delete status"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/state": {
+      "get": {
+        "summary": "Show all state",
+        "tags": [
+          "State"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all state"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new state",
+        "tags": [
+          "State"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/State/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "state created"
+          },
+          "400": {
+            "description": "Error when creating state"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an state",
+        "tags": [
+          "State"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/State/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "state Deleted"
+          },
+          "400": {
+            "description": "Error when deleting state"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a state",
+        "tags": [
+          "State"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/State/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "state Updated"
+          },
+          "400": {
+            "description": "Error when delete state"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/principesActifs": {
+      "get": {
+        "summary": "Show all principies actifs",
+        "tags": [
+          "Principies Actifs"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all principies actifs"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new principies actifs",
+        "tags": [
+          "Principies Actifs"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PrincipiesActifs/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Principies actifs created"
+          },
+          "400": {
+            "description": "Error when creating principies actifs"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an principies actifs",
+        "tags": [
+          "Principies Actifs"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PrincipiesActifs/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Principies actifs Deleted"
+          },
+          "400": {
+            "description": "Error when deleting principies actifs"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a principies actifs",
+        "tags": [
+          "Principies Actifs"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PrincipiesActifs/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Principies actifs updated"
+          },
+          "400": {
+            "description": "Error when delete principies actifs"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/pharmacologicClass": {
+      "get": {
+        "summary": "Show all pharmacologic class",
+        "tags": [
+          "Pharmacologic Class"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all pharmacologic class"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new pharmacologic class",
+        "tags": [
+          "Pharmacologic Class"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PharmacologicClass/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pharmacologic class created"
+          },
+          "400": {
+            "description": "Error when creating pharmacologic class"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an pharmacologic class",
+        "tags": [
+          "Pharmacologic Class"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PharmacologicClass/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pharmacologic class Deleted"
+          },
+          "400": {
+            "description": "Error when deleting pharmacologic class"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a pharmacologic class",
+        "tags": [
+          "Pharmacologic Class"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/PharmacologicClass/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pharmacologic class updated"
+          },
+          "400": {
+            "description": "Error when delete pharmacologic class"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/ceCategory": {
+      "get": {
+        "summary": "Show all commercial establishments category",
+        "tags": [
+          "Commercial Establishments Category"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all commercial establishments category"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new commercial establishments category",
+        "tags": [
+          "Commercial Establishments Category"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CeCategory/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Commercial establishments category created"
+          },
+          "400": {
+            "description": "Error when creating commercial establishments category"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an commercial establishments category",
+        "tags": [
+          "Commercial Establishments Category"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CeCategory/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Commercial establishments category Deleted"
+          },
+          "400": {
+            "description": "Error when deleting commercial establishments category"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a commercial establishments category",
+        "tags": [
+          "Commercial Establishments Category"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CeCategory/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Commercial establishments category updated"
+          },
+          "400": {
+            "description": "Error when delete commercial establishments category"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/oieClassification": {
+      "get": {
+        "summary": "Show all oie classification",
+        "tags": [
+          "Oie Classification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all oie classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new oie classification",
+        "tags": [
+          "Oie Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OieClassification/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oie classification created"
+          },
+          "400": {
+            "description": "Error when creating oie classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an oie classification",
+        "tags": [
+          "Oie Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OieClassification/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oie classification Deleted"
+          },
+          "400": {
+            "description": "Error when deleting oie classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a oie classification",
+        "tags": [
+          "Oie Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OieClassification/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oie classification updated"
+          },
+          "400": {
+            "description": "Error when delete oie classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/omsClassification": {
+      "get": {
+        "summary": "Show all Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all Oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OmsClassification/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification created"
+          },
+          "400": {
+            "description": "Error when creating oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OmsClassification/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification Deleted"
+          },
+          "400": {
+            "description": "Error when deleting oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/OmsClassification/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification updated"
+          },
+          "400": {
+            "description": "Error when delete oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/userPosition": {
+      "get": {
+        "summary": "Show all Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all Oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/UserPosition/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification created"
+          },
+          "400": {
+            "description": "Error when creating oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an Oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/UserPosition/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification Deleted"
+          },
+          "400": {
+            "description": "Error when deleting oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a oms classification",
+        "tags": [
+          "Oms Classification"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/UserPosition/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Oms classification updated"
+          },
+          "400": {
+            "description": "Error when delete oms classification"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/uc": {
+      "get": {
+        "summary": "Show all Uc",
+        "tags": [
+          "Uc"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all Uc"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new Uc",
+        "tags": [
+          "Uc"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Uc/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Uc created"
+          },
+          "400": {
+            "description": "Error when creating Uc"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an Uc",
+        "tags": [
+          "Uc"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Uc/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Uc Deleted"
+          },
+          "400": {
+            "description": "Error when deleting Uc"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a Uc",
+        "tags": [
+          "Uc"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Uc/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Uc updated"
+          },
+          "400": {
+            "description": "Error when delete Uc"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/assignedCe": {
+      "get": {
+        "summary": "Show all assigned Ce",
+        "tags": [
+          "Assigned Ce"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all assigned Ce"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new assigned Ce",
+        "tags": [
+          "Assigned Ce"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/AssignedCe/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Assigned Ce created"
+          },
+          "400": {
+            "description": "Error when creating assigned Ce"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an assigned Ce",
+        "tags": [
+          "Assigned Ce"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/AssignedCe/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Assigned Ce Deleted"
+          },
+          "400": {
+            "description": "Error when deleting assigned Ce"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a assigned Ce",
+        "tags": [
+          "Assigned Ce"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/AssignedCe/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Assigned Ce updated"
+          },
+          "400": {
+            "description": "Error when delete assigned Ce"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schema":{
+      "Session": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "Status":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "State":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "PrincipiesActifs":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "PharmacologicClass":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "CeCategory":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "OieClassification":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "OmsClassification":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "UserPosition":{
+        "Create": {
+          "required": [
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "AssignedCe":{
+        "Create": {
+          "required": [
+            "user_id",
+            "ce_id",
+            "status_id"
+          ],
+          "properties": {
+            "user_id": {
+              "type": "integer"
+            },
+            "ce_id": {
+              "type": "integer"
+            },
+            "status_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "user_id",
+            "ce_id",
+            "status_id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "user_id": {
+              "type": "integer"
+            },
+            "ce_id": {
+              "type": "integer"
+            },
+            "status_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
