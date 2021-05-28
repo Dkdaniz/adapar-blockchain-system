@@ -1,6 +1,6 @@
 const yup = require('yup');
 
-const UserStoreSchema = yup.object().shape({
+const CommercialEstablishmentsStoreSchema = yup.object().shape({
   ulsa_id: yup.number().required(),
   city_id: yup.number().required(),
   category_id: yup.number().required(),
@@ -17,7 +17,7 @@ const UserStoreSchema = yup.object().shape({
   register_data: yup.date().required(),
 });
 
-const UserUpdateSchema = yup.object().shape({
+const CommercialEstablishmentsUpdateSchema = yup.object().shape({
   id: yup.number().required(),
   ulsa_id: yup.number(),
   city_id: yup.number(),
@@ -35,12 +35,12 @@ const UserUpdateSchema = yup.object().shape({
   register_data: yup.date(),
 });
 
-const UserDeleteSchema = yup.object().shape({
+const CommercialEstablishmentsDeleteSchema = yup.object().shape({
   id: yup.number().required(),
 });
 
 module.exports = {
-  UserStoreSchema,
-  UserUpdateSchema,
-  UserDeleteSchema,
+  CommercialEstablishmentsStoreSchema,
+  CommercialEstablishmentsUpdateSchema,
+  CommercialEstablishmentsDeleteSchema,
 };

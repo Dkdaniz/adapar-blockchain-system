@@ -741,13 +741,13 @@
     },
     "/userPosition": {
       "get": {
-        "summary": "Show all Oms classification",
+        "summary": "Show all user position",
         "tags": [
-          "Oms Classification"
+          "User Position"
         ],
         "responses": {
           "200": {
-            "description": "Return all Oms classification"
+            "description": "Return all user position"
           },
           "401": {
             "description": "Unauthorized"
@@ -755,9 +755,9 @@
         }
       },
       "post": {
-        "summary": "Create an new Oms classification",
+        "summary": "Create an new user position",
         "tags": [
-          "Oms Classification"
+          "User Position"
         ],
         "requestBody": {
           "required": true,
@@ -771,10 +771,10 @@
         },
         "responses": {
           "200": {
-            "description": "Oms classification created"
+            "description": "User position created"
           },
           "400": {
-            "description": "Error when creating oms classification"
+            "description": "Error when creating user position"
           },
           "401": {
             "description": "Unauthorized"
@@ -782,9 +782,9 @@
         }
       },
       "put": {
-        "summary": "Update an Oms classification",
+        "summary": "Update an user position",
         "tags": [
-          "Oms Classification"
+          "User Position"
         ],
         "requestBody": {
           "required": true,
@@ -798,10 +798,10 @@
         },
         "responses": {
           "200": {
-            "description": "Oms classification Deleted"
+            "description": "User position Deleted"
           },
           "400": {
-            "description": "Error when deleting oms classification"
+            "description": "Error when deleting user position"
           },
           "401": {
             "description": "Unauthorized"
@@ -812,9 +812,9 @@
         }
       },
       "delete": {
-        "summary": "Delete a oms classification",
+        "summary": "Delete a user position",
         "tags": [
-          "Oms Classification"
+          "User Position"
         ],
         "requestBody": {
           "required": true,
@@ -828,10 +828,10 @@
         },
         "responses": {
           "200": {
-            "description": "Oms classification updated"
+            "description": "User position updated"
           },
           "400": {
-            "description": "Error when delete oms classification"
+            "description": "Error when delete user position"
           },
           "401": {
             "description": "Unauthorized"
@@ -1035,6 +1035,112 @@
           },
           "400": {
             "description": "Error when delete assigned Ce"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      }
+    },
+    "/commercialEstablishments": {
+      "get": {
+        "summary": "Show all commercial establishments",
+        "tags": [
+          "Commercial Establishments"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all commercial establishments"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new commercial establishments",
+        "tags": [
+          "Commercial Establishments"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CommercialEstablishments/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Commercial establishments created"
+          },
+          "400": {
+            "description": "Error when creating commercial establishments"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an commercial establishments",
+        "tags": [
+          "Commercial Establishments"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CommercialEstablishments/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Commercial establishments Deleted"
+          },
+          "400": {
+            "description": "Error when deleting commercial establishments"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a commercial establishments",
+        "tags": [
+          "commercial establishments"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/CommercialEstablishments/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "commercial establishments updated"
+          },
+          "400": {
+            "description": "Error when delete commercial establishments"
           },
           "401": {
             "description": "Unauthorized"
@@ -1395,6 +1501,154 @@
             },
             "status_id": {
               "type": "integer"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "CommercialEstablishments":{
+        "Create": {
+          "required": [
+            "ulsa_id",
+            "city_id",
+            "category_id",
+            "status_id",
+            "status_auditor_id",
+            "status_rt_id",
+            "name",
+            "commercial_name",
+            "cnpj",
+            "state_registration",
+            "address",
+            "contact_number",
+            "email",
+            "register_number",
+            "register_data"
+          ],
+          "properties": {
+            "ulsa_id": {
+              "type": "integer"
+            },
+            "city_id": {
+              "type": "integer"
+            },
+            "category_id": {
+              "type": "integer"
+            },
+            "status_id": {
+              "type": "integer"
+            },
+            "status_auditor_id": {
+              "type": "integer"
+            },
+            "status_rt_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "commercial_name": {
+              "type": "string"
+            },
+            "cnpj": {
+              "type": "integer"
+            },
+            "state_registration": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "contact_number": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            },
+            "register_number": {
+              "type": "string"
+            },
+            "register_data": {
+              "type": "date"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "ulsa_id",
+            "city_id",
+            "category_id",
+            "status_id",
+            "status_auditor_id",
+            "status_rt_id",
+            "name",
+            "commercial_name",
+            "cnpj",
+            "state_registration",
+            "address",
+            "contact_number",
+            "email",
+            "register_number",
+            "register_data"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "ulsa_id": {
+              "type": "integer"
+            },
+            "city_id": {
+              "type": "integer"
+            },
+            "category_id": {
+              "type": "integer"
+            },
+            "status_id": {
+              "type": "integer"
+            },
+            "status_auditor_id": {
+              "type": "integer"
+            },
+            "status_rt_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "commercial_name": {
+              "type": "string"
+            },
+            "cnpj": {
+              "type": "integer"
+            },
+            "state_registration": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "contact_number": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            },
+            "register_number": {
+              "type": "string"
+            },
+            "register_data": {
+              "type": "date"
             }
           }
         },
