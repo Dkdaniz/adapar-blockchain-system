@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) =>
       contact_number: DataTypes.INTEGER,
       email: DataTypes.STRING,
       register_number: DataTypes.INTEGER,
-      register_data: DataTypes.DATE,
+      register_date: DataTypes.DATE,
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
     },

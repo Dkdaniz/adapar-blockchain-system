@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) =>
   sequelize.define(
-    'product',
+    'products',
     {
       pharmacologic_class_id: DataTypes.INTEGER,
       manufacturer_id: DataTypes.INTEGER,
@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) =>
       principes_actifs_id: DataTypes.INTEGER,
       name: DataTypes.STRING,
       animal_species: DataTypes.STRING,
-      adminstration_route: DataTypes.STRING,
+      administration_route: DataTypes.STRING,
       license_identifier: DataTypes.INTEGER,
       license_year: DataTypes.INTEGER,
       createdAt: DataTypes.DATE,
@@ -18,6 +18,6 @@ module.exports = (sequelize, DataTypes) =>
     },
     {
       freezeTableName: true,
-      tableName: 'product',
+      tableName: 'products',
     }
   );

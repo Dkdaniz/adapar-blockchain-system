@@ -56,7 +56,7 @@ async function store(req, res) {
     contact_number,
     email,
     register_number,
-    register_data,
+    register_date,
   } = req.body;
 
   const ulsaCheck = ulsa.findOne({ where: { id: ulsa_id } });
@@ -100,7 +100,7 @@ async function store(req, res) {
         contact_number,
         email,
         register_number,
-        register_data,
+        register_date,
       }
     );
 
@@ -139,7 +139,7 @@ async function update(req, res) {
     contact_number,
     email,
     register_number,
-    register_data,
+    register_date,
   } = req.body;
 
   const commercialEstablishmentsUpdate = await commercial_establishments.findOne(
@@ -216,8 +216,8 @@ async function update(req, res) {
   if (email) commercialEstablishmentsUpdate.email = email;
   if (register_number)
     commercialEstablishmentsUpdate.register_number = register_number;
-  if (register_data)
-    commercialEstablishmentsUpdate.register_data = register_data;
+  if (register_date)
+    commercialEstablishmentsUpdate.register_date = register_date;
 
   try {
     await commercialEstablishmentsUpdate.save();

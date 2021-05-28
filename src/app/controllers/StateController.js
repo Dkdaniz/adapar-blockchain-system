@@ -37,7 +37,7 @@ async function store(req, res) {
       description,
     });
 
-    res.status(200).json({ status: stateStore });
+    res.status(200).json({ state: stateStore });
   } catch (error) {
     return res.status(400).json({ error: 'Error in create state' });
   }
@@ -66,7 +66,7 @@ async function update(req, res) {
     return res.status(400).json({ error: 'error in update state' });
   }
 
-  res.status(200).json({ status: stateUpdate });
+  res.status(200).json({ state: stateUpdate });
 }
 
 async function remove(req, res) {

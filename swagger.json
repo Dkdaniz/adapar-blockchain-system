@@ -1123,7 +1123,7 @@
       "delete": {
         "summary": "Delete a commercial establishments",
         "tags": [
-          "commercial establishments"
+          "Commercial Establishments"
         ],
         "requestBody": {
           "required": true,
@@ -1147,6 +1147,424 @@
           },
           "404": {
             "description": "Error id dont was found"
+          }
+        }
+      }
+    },
+    "/manufacturers": {
+      "get": {
+        "summary": "Show all manufacturers",
+        "tags": [
+          "Manufacturers"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all manufacturers"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new manufacturers",
+        "tags": [
+          "Manufacturers"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Manufacturers/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Manufacturers created"
+          },
+          "400": {
+            "description": "Error when creating manufacturers"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an manufacturers",
+        "tags": [
+          "Manufacturers"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Manufacturers/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Manufacturers Deleted"
+          },
+          "400": {
+            "description": "Error when deleting manufacturers"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a manufacturers",
+        "tags": [
+          "Manufacturers"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Manufacturers/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Manufacturers updated"
+          },
+          "400": {
+            "description": "Error when delete manufacturers"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Show all product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new product",
+        "tags": [
+          "Products"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Product/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "product created"
+          },
+          "400": {
+            "description": "Error when creating product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an product",
+        "tags": [
+          "Products"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Product/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "product Deleted"
+          },
+          "400": {
+            "description": "Error when deleting product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a product",
+        "tags": [
+          "Products"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Product/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "product updated"
+          },
+          "400": {
+            "description": "Error when delete product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      }
+    },
+    "/stockProduct": {
+      "get": {
+        "summary": "Show all stock product",
+        "tags": [
+          "Stock product"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all stock product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new stock product",
+        "tags": [
+          "Stock product"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/StockProduct/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "stock product created"
+          },
+          "400": {
+            "description": "Error when creating stock product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an stock product",
+        "tags": [
+          "Stock product"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/StockProduct/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "stock product Deleted"
+          },
+          "400": {
+            "description": "Error when deleting stock product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a stock product",
+        "tags": [
+          "Stock product"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/StockProduct/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "stock product updated"
+          },
+          "400": {
+            "description": "Error when delete stock product"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      }
+    },
+    "/ulsa": {
+      "get": {
+        "summary": "Show all ulsa",
+        "tags": [
+          "Ulsa"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all ulsa"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new ulsa",
+        "tags": [
+          "Ulsa"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Ulsa/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ulsa created"
+          },
+          "400": {
+            "description": "Error when creating ulsa"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an ulsa",
+        "tags": [
+          "Ulsa"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Ulsa/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ulsa Deleted"
+          },
+          "400": {
+            "description": "Error when deleting ulsa"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a ulsa",
+        "tags": [
+          "Ulsa"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Ulsa/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ulsa updated"
+          },
+          "400": {
+            "description": "Error when delete ulsa"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
@@ -1463,6 +1881,42 @@
           }
         }
       },
+      "Uc":{
+        "Create": {
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
       "AssignedCe":{
         "Create": {
           "required": [
@@ -1532,7 +1986,7 @@
             "contact_number",
             "email",
             "register_number",
-            "register_data"
+            "register_date"
           ],
           "properties": {
             "ulsa_id": {
@@ -1577,8 +2031,8 @@
             "register_number": {
               "type": "string"
             },
-            "register_data": {
-              "type": "date"
+            "register_date": {
+              "type": "string"
             }
           }
         },
@@ -1599,7 +2053,7 @@
             "contact_number",
             "email",
             "register_number",
-            "register_data"
+            "register_date"
           ],
           "properties": {
             "id": {
@@ -1647,8 +2101,320 @@
             "register_number": {
               "type": "string"
             },
-            "register_data": {
-              "type": "date"
+            "register_date": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "Manufacturers":{
+        "Create": {
+          "required": [
+            "name",
+            "commercial_name",
+            "cnpj",
+            "address",
+            "contact_number",
+            "email"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "commercial_name": {
+              "type": "string"
+            },
+            "cnpj": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "contact_number": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "name",
+            "commercial_name",
+            "cnpj",
+            "address",
+            "contact_number",
+            "email"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "commercial_name": {
+              "type": "string"
+            },
+            "cnpj": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "contact_number": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "Product":{
+        "Create": {
+          "required": [
+            "pharmacologic_class_id",
+            "manufacturer_id",
+            "stock_id",
+            "oms_id",
+            "oie_id",
+            "principes_actifs_id",
+            "name",
+            "animal_species",
+            "adminstration_route",
+            "license_identifier",
+            "license_year"
+          ],
+          "properties": {
+            "pharmacologic_class_id": {
+              "type": "integer"
+            },
+            "manufacturer_id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "oms_id": {
+              "type": "integer"
+            },
+            "oie_id": {
+              "type": "integer"
+            },
+            "principes_actifs_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "integer"
+            },
+            "animal_species": {
+              "type": "integer"
+            },
+            "adminstration_route": {
+              "type": "integer"
+            },
+            "license_identifier": {
+              "type": "integer"
+            },
+            "license_year": {
+              "type": "integer"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "pharmacologic_class_id",
+            "manufacturer_id",
+            "stock_id",
+            "oms_id",
+            "oie_id",
+            "principes_actifs_id",
+            "name",
+            "animal_species",
+            "adminstration_route",
+            "license_identifier",
+            "license_year"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "pharmacologic_class_id": {
+              "type": "integer"
+            },
+            "manufacturer_id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "oms_id": {
+              "type": "integer"
+            },
+            "oie_id": {
+              "type": "integer"
+            },
+            "principes_actifs_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "integer"
+            },
+            "animal_species": {
+              "type": "integer"
+            },
+            "adminstration_route": {
+              "type": "integer"
+            },
+            "license_identifier": {
+              "type": "integer"
+            },
+            "license_year": {
+              "type": "integer"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "StockProduct":{
+        "Create": {
+          "required": [
+            "product_id",
+            "ce_id",
+            "quantity",
+            "stock_in",
+            "stock_out",
+            "losses"
+          ],
+          "properties": {
+            "product_id": {
+              "type": "integer"
+            },
+            "ce_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "stock_in": {
+              "type": "number"
+            },
+            "stock_out": {
+              "type": "number"
+            },
+            "losses": {
+              "type": "number"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "product_id",
+            "ce_id",
+            "quantity",
+            "stock_in",
+            "stock_out",
+            "losses"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "ce_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "stock_in": {
+              "type": "number"
+            },
+            "stock_out": {
+              "type": "number"
+            },
+            "losses": {
+              "type": "number"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "Ulsa":{
+        "Create": {
+          "required": [
+            "urs_id",
+            "name"
+          ],
+          "properties": {
+            "urs_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "urs_id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "urs_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
             }
           }
         },
