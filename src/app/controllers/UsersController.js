@@ -215,15 +215,15 @@ async function remove(req, res) {
   try {
     await users.destroy({ where: { id } });
   } catch (error) {
-    return res.status(400).json({ error: 'error in delete assigned ce' });
+    return res.status(400).json({ error: 'error in delete user' });
   }
 
-  res.status(200).json({ messages: 'Assigned ce was deleted' });
+  res.status(200).json({ messages: 'User was deleted' });
 }
 
 module.exports = (app) => {
-  app.get('/user', show);
-  app.post('/user', store);
-  app.put('/user', update);
-  app.delete('/user', remove);
+  app.get('/users', show);
+  app.post('/users', store);
+  app.put('/users', update);
+  app.delete('/users', remove);
 };
