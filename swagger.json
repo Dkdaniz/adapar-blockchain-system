@@ -1568,6 +1568,106 @@
           }
         }
       }
+    },
+    "/users": {
+      "get": {
+        "summary": "Show all users",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return all users"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an new users",
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Users/Create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Users created"
+          },
+          "400": {
+            "description": "Error when creating users"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an users",
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Users/Update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Users Deleted"
+          },
+          "400": {
+            "description": "Error when deleting users"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Error id dont was found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a users",
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schema/Users/Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Users updated"
+          },
+          "400": {
+            "description": "Error when delete users"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1972,7 +2072,7 @@
       "CommercialEstablishments":{
         "Create": {
           "required": [
-            "ulsa_id",
+            "users_id",
             "city_id",
             "category_id",
             "status_id",
@@ -2415,6 +2515,108 @@
             },
             "name": {
               "type": "string"
+            }
+          }
+        },
+        "Delete": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "Users":{
+        "Create": {
+          "required": [
+            "ce_id",
+            "ulsa_id",
+            "uc_id",
+            "urs_id",
+            "position_id",
+            "name",
+            "password",
+            "email",
+            "cpf",
+            "crmv"
+          ],
+          "properties": {
+            "ce_id": {
+              "type": "integer"
+            },
+            "ulsa_id": {
+              "type": "integer"
+            },
+            "uc_id": {
+              "type": "integer"
+            },
+            "position_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "cpf": {
+              "type": "integer"
+            },
+            "crmv": {
+              "type": "integer"
+            }
+          }
+        },
+        "Update": {
+          "required": [
+            "id",
+            "ce_id",
+            "ulsa_id",
+            "uc_id",
+            "urs_id",
+            "position_id",
+            "name",
+            "password",
+            "email",
+            "cpf",
+            "crmv"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "ce_id": {
+              "type": "integer"
+            },
+            "ulsa_id": {
+              "type": "integer"
+            },
+            "uc_id": {
+              "type": "integer"
+            },
+            "position_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "cpf": {
+              "type": "integer"
+            },
+            "crmv": {
+              "type": "integer"
             }
           }
         },
