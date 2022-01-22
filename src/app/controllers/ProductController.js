@@ -49,6 +49,7 @@ async function store(req, res) {
     name,
     animal_species,
     administration_route,
+    concentration,
     license_identifier,
     license_year,
   } = req.body;
@@ -101,6 +102,7 @@ async function store(req, res) {
       name,
       animal_species,
       administration_route,
+      concentration,
       license_identifier,
       license_year,
     });
@@ -131,6 +133,7 @@ async function update(req, res) {
     name,
     animal_species,
     administration_route,
+    concentration,
     license_identifier,
     license_year,
   } = req.body;
@@ -196,6 +199,7 @@ async function update(req, res) {
     productUpdate.administration_route = administration_route;
   if (license_identifier) productUpdate.license_identifier = license_identifier;
   if (license_year) productUpdate.license_year = license_year;
+  if (concentration) productUpdate.concentration = concentration;
 
   try {
     await productUpdate.save();

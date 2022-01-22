@@ -25,6 +25,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('ce_status');
+    await queryInterface.dropTable('status');
   },
 };

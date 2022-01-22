@@ -43,6 +43,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      concentration: {
+        type: Sequelize.DOUBLE,
+        allowNull: false,
+      },
       license_identifier: {
         type: Sequelize.INTEGER,
         allowNull: true,

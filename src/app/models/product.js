@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) =>
       administration_route: DataTypes.STRING,
       license_identifier: DataTypes.INTEGER,
       license_year: DataTypes.INTEGER,
+      concentration: DataTypes.DOUBLE,
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
     },
